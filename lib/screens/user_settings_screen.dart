@@ -95,13 +95,12 @@ class _UserSettingsScreenState extends State<UserSettingsScreen> {
         return '🇫🇷';
       case 'japan':
         return '🇯🇵';
-      case 'United States':
-        return '🇺🇸';
       default:
         return '🌍'; // Emoji genérico para países desconhecidos
     }
   }
 
+  // parte do corpor do site
   _buildUserSettingScreenBody() {
     return Column(
       children: [
@@ -119,7 +118,7 @@ class _UserSettingsScreenState extends State<UserSettingsScreen> {
           decoration: InputDecoration(labelText: 'Country:'),
         ),
 
-        SizedBox(height: 30),
+        SizedBox(height: 50),
 
         if (countryEmoji.isNotEmpty)
           Text('País favorito: $countryEmoji', style: TextStyle(fontSize: 24)),
